@@ -1,0 +1,864 @@
+*{
+   box-sizing: border-box;
+   font-family: 'Yeseva One', cursive;
+ 
+}
+body{
+   margin: 0;
+   
+
+}
+h1{
+   font-family: 'EB Garamond', serif;
+   font-size: 2.5rem;
+   text-align: center;
+
+}
+h2{
+   font-size: 2rem;
+   text-align: center;
+}
+a{
+   color: aliceblue;
+   font-size: 1.2rem;
+   text-decoration: none;
+}
+
+p{
+   font-size: 1.5rem;
+   text-align: center;
+}
+.dotted-hr{
+  /*  border:dotted white; */
+  border: none;
+   
+   margin: 20px auto;
+   width: 60px;
+}
+[class*="col-"]{
+   float: left;
+   padding: 10px;
+}
+
+/* for mobile */
+[class*="col-"]{
+   width: 100%;
+}
+
+ /* navber design starts here   */
+ /* Adjust layout for smaller screens */
+@media only screen and (max-width: 992px) {
+
+   .navber {
+      background-color: white;
+      height: auto; /* Adjust height automatically based on content */
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%; /* Adjust padding for smaller screens */
+      position: relative;
+    
+   }
+   
+   .navber-logo {
+     margin-bottom: 10px;
+   }
+ 
+   .navber-menu ul {
+     flex-direction: column;
+     text-align: center;
+     list-style:none; 
+   }
+ 
+   .navber-menu ul li {
+     padding: 10px 0;
+     position: relative;
+   }
+ 
+   .navber-menu ul li a {
+     font-size: 20px;
+     color: black;  
+   }
+   .navber ul li a:hover {
+      background-color:rgb(28, 146, 28) ;
+      color: white;
+      margin: 5px;
+      padding: 8px;
+      border-radius: 10px;
+    }
+   .navber-menu ul li:last-child {
+     margin-bottom: 0;
+   }
+ 
+   .dropdown-menu {
+     position: static;
+     display: none;
+    color: black;
+  
+   }
+ 
+   .navber ul li:hover .dropdown-menu {
+     display: block;
+     position: static;
+     margin-top: 10px;
+     width: 100%;
+   }
+ 
+   .navber ul li:hover .dropdown-menu ul {
+     display: block;
+     margin: 0;
+   }
+ 
+   .navber ul li:hover .dropdown-menu ul li {
+     width: auto;
+     padding: 10px 20px;
+     margin-left: 0;
+   }
+ 
+   .navber-logo img {
+     height: auto;
+     width: 100%;
+   }
+ }
+
+
+ /* Style for the hamburger menu button */
+.toggle-button {
+   display: block;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   font-size: 24px;
+   padding: 10px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: black;
+ }
+ 
+ /* Show the navbar when the toggle button is clicked */
+ .navber.show {
+   display: flex !important;
+   flex-direction: column;
+ }
+ 
+ .profile {
+   height: 95vh;
+   width: 100%;
+   background-image: url(image/bg.jpg);
+   background-position: center;
+   background-size: cover; /* This will make the background image cover the entire container */
+}
+
+.profile-desc {
+   padding-top: 50vh;
+}
+
+
+ /* .profile-more {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.profile-more .img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+.profile-more .img img {
+   width: 450px;
+   height: 250px;
+   margin: 15px;
+}
+
+.profile-more .text {
+   flex: 0 0 calc(100% - 30px);
+   max-width: calc(100% - 30px);
+   padding: 0 15px;
+}
+
+.profile-more h1 {
+   font-size: 24px;
+}
+
+.profile-more p {
+   font-size: 16px;
+   text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+   .profile-more .img {
+      flex: 1 1 50%;
+       max-width: 40%;
+   }
+
+   .profile-more .text {
+      flex: 1 1 50%;
+      text-align: center;
+   }
+
+   .profile-more p {
+       text-indent: 50px;
+   }
+} */
+
+.profile::after{
+   content: '';
+   display: table;
+   clear:both;
+}
+
+
+.profile-text p{
+   text-align: justify;
+   font-size: 15px;
+   padding: 15px 15px;
+
+}
+
+/* card start  here */
+.card-container{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-top: 50px;
+   box-shadow: 0px 2px 4px rgba(0,0,0,0,2);
+   gap: 25px;
+
+}
+.service-card{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-left: 0%;
+}
+.card-content-1{
+   padding: 16px;
+   margin-left: -10px;
+}
+.card-container-1 h3{
+text-align: center;
+}
+
+.card-content-1 p{
+   color: rgb(18, 16, 20);
+   font-size: 15px;
+ text-align: justify;
+padding: 5px;
+ line-height: 1.3;
+}
+.card{
+   width: 325px;
+   background-color: rgb(241, 241, 241);
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0px 2px 4px rgba(0,0,0,0,2);
+   margin: 20px;
+  transition: transform 0.6s ease;
+}
+.card img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+.card-content{
+   padding: 16px;
+
+}
+
+.card-content h3{
+   font-size: 30px;
+   margin-bottom: 8px;
+}
+
+.card-content p{
+   color: rgb(18, 16, 20);
+   font-size: 15px;
+   line-height: 1.3;
+   text-align: justify;
+}
+.card:hover{
+   transform: translateY(-20px);
+}
+.card-container::after{
+   content: '';
+   display: table;
+   clear:both;
+}
+@media only screen and (max-width: 768px) {
+   .card {
+      width: calc(70% - 40px);
+      margin: 20px 20px 0 20px; /* Adjust margins for better spacing */
+   }
+   
+   .card-container {
+      margin-top: 100px; /* Adjust margin top for better positioning */
+   }
+   .card-container-1{
+      margin-top: 100px; /* Adjust margin top for better positioning */
+   }
+}
+/* card ends  here */
+
+/* Responsive CSS for videos */
+.vedio {
+   margin: 5% 5%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.vedio h2 {
+   text-align: center;
+ 
+}
+
+.vedio iframe {
+   margin: 10px;
+   max-width: calc(50% - 20px); /* Ensure two videos per row with some spacing */
+}
+
+@media only screen and (max-width: 768px) {
+   .vedio {
+       padding-left: 5%; /* Adjust padding for smaller screens */
+   }
+   
+   .vedio iframe {
+       max-width: calc(100% - 20px); /* Ensure videos take full width with some spacing */
+   }
+}
+
+/* profile design ends  here */
+
+.slider-container {
+   overflow: hidden; /* Hide overflow content */
+   max-width: 100%; /* Set width of slider container */
+  
+   padding: 15px;
+ }
+ 
+ .slider {
+   display: flex; /* Display slides in a row */
+   animation: slide 30s infinite; /* Apply animation to slide */
+ }
+ 
+ .slide {
+   width: 100%; /* Set width of each slide */
+   flex-shrink: 0; /* Prevent shrinking of slides */
+   padding: 20px; /* Add padding to slides */
+   box-sizing: border-box; /* Include padding and border in width */
+
+ }
+ 
+ .slide h2 {
+   margin-top: 0; /* Remove default margin for heading */
+ }
+ 
+ .slide p {
+   text-align: justify;
+   font-size: 15px; 
+   margin-left: 50px;
+ }
+ @keyframes slide {
+   0% {
+     transform: translateX(0); /* Start position */
+   }
+   100% {
+     transform: translateX(-200%); /* End position (slide to left) */
+   }
+ }
+ 
+ /* Adjust slide duration */
+ .slider .slide:nth-child(1) {
+   animation-duration: 20s; /* Duration for Slide 1 */
+ }
+ .slider .slide:nth-child(2) {
+   animation-duration: 20s; /* Duration for Slide 2 */
+ }
+ .slider .slide:nth-child(3) {
+   animation-duration: 20s; /* Duration for Slide 3 */
+ }
+ 
+/* Aboutme design starts here */
+.about-me{
+
+   padding: 1% 5%;
+   text-align: center;
+   width: 100%;
+   /* font-family: ; */
+  
+  }
+.aboutme-image img{
+   border: 5px solid white;
+   border-radius: 50%; 
+   height:250px ;
+   width: 200px;
+   top: 50px;
+   left: 50px; 
+}
+.about-me p{
+   text-align: justify;
+}
+.aboutme-desc p{
+   font-size: 15px;
+   text-align: justify;
+}
+.aboutme-desc a{
+   color: black;
+   font-size: 15px;
+}
+
+.section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   max-width: 1000px;
+   padding: 20px;
+}
+
+
+
+.section img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+  
+}
+
+.section h1 {
+   font-size: 30px;
+   color: rgb(255, 0, 0);
+}
+
+.section p {
+   font-size: 15px;
+   text-align: justify;
+   padding: 10px;
+}
+
+@media screen and (min-width: 992px) {
+   .section .img {
+       flex: 1 1 50%;
+   
+   }
+
+   .section .text {
+       flex: 1 1 50%;
+       text-align: center;
+   }
+
+   .section img {
+      margin-left: -100px;
+   }
+}
+.more-text{
+   margin: auto;
+ 
+
+}
+.more-text h1{
+   text-align: center;
+}
+.more-text p{
+   font-size: 15px;
+   text-align: justify;
+  padding: 30px 30px;   
+}
+
+.cv-button{
+   background-color: rgb(0, 101, 96);
+   color: aliceblue;
+   border: none;
+   border-radius: 10px;
+   padding: 15px;
+   font-size: 1rem;
+}
+
+
+
+.about-exta img{
+    
+   width: 500px;
+   height: 400px;
+   padding: 30px 30px;
+   margin-top: 40px;
+   
+}
+.about-exta text{
+   margin:auto;
+   
+   }
+
+   .about-exta p{
+      text-indent: 50px;
+      font-size: 15px;
+      text-align: justify;
+      display: flex;
+      padding: 50px 50px;
+   
+   }
+.about-me::after{
+   content: '';
+   display: table;
+   clear:both;
+}
+/* Aboutme design ends here */
+/* professional-exprience start here */
+.professional-exprience{
+   padding: 1%;
+   background-color: rgb(66, 216, 176);
+}
+.card-desc{
+   padding: 2%;
+}
+.card-desc a{
+   color: black;
+}
+
+.professional-exprience::after{
+   clear: both;
+   display: table;
+   content: '';
+}
+.professional-expriences{
+   padding: 1%;
+   background-color: rgb(116, 173, 101);
+}
+
+.professional-expriences::after{
+   clear: both;
+   display: table;
+   content: '';
+}
+
+.card-desc p{
+   font-size: 15px;
+   text-align: left;
+   padding: 10px;
+}
+
+.card-desc h3{
+   font-size: 10px;
+   text-align: justify;
+}
+.pic-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.skill-title {
+   margin-bottom: 10px;
+}
+
+.pic-containers img {
+   max-width: 400px;
+   height: auto;
+}
+
+
+ .services-more {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.services-more .text {
+   flex: 0 0 100%;
+   max-width: 100%;
+   padding: 0 15px;
+   margin-left: 0; /* Reset margin-left */
+}
+
+.services-more h1 {
+   font-size: 24px;
+}
+
+.services-more p {
+   font-size: 16px;
+   text-align: justify;
+   padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+   .services-more .text {
+       flex: 0 0 calc(50% - 60px);
+       max-width: calc(50% - 60px);
+       padding: 30px; /* Adjust padding */
+       margin-left: 30px;
+   }
+
+   .services-more p {
+       margin-left: 0;
+   }
+}
+
+/* professional-exprience ends here */
+
+
+
+/* pricing start here  */
+
+.sera-heading {
+   margin: 20px;
+   padding: 20px;
+}
+.sera-heading p{
+   font-size: 15px;
+   text-align: justify;
+}
+.about-sera {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: green;
+}
+
+/* Style headings */
+.about-sera h2 {
+   font-size: 24px;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+.about-sera h5 {
+   font-size: 18px;
+   margin-top: 20px;
+   text-align: justify;
+}
+
+/* Style paragraphs */
+.about-sera p {
+   font-size: 16px;
+   line-height: 1.5;
+   margin-bottom: 20px;
+   text-align: justify;
+}
+
+/* Adjust layout for smaller screens */
+@media only screen and (max-width: 600px) {
+   .about-sera {
+       padding: 10px;
+   }
+   .about-sera h2 {
+       font-size: 20px;
+   }
+   .about-sera h5 {
+       font-size: 16px;
+   }
+   .about-sera p {
+       font-size: 14px;
+   }
+}
+/* pricing ends here  */
+
+/* protfolio start here */
+.protfolio {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 20px;
+}
+
+.protfolio-pic {
+   flex: 0 0 100%;
+   max-width: 100%;
+   margin-bottom: 20px;
+}
+
+.protfolio-pic img {
+   width: 100%;
+   height: auto;
+}
+
+.protfolio-dec {
+   flex: 0 0 100%;
+   max-width: 100%;
+}
+
+.protfolio P {
+   text-align: justify;
+   font-size: 15px;
+}
+
+.protfolio h3{
+   text-align: left;
+   font-size: 25px;
+   color: rgb(77, 201, 77);
+}
+
+.protfolio-dec p,
+.protfolio-dec h3 {
+   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+   .protfolio-pic {
+       flex: 0 0 40%;
+       max-width: 40%;
+       margin-right: 20px;
+   }
+
+   .protfolio-dec {
+       flex: 0 0 60%;
+       max-width: 60%;
+   }
+}
+.protfolio-end {
+   text-align: center;
+   max-width: 60%;
+   background-color: rgb(13, 129, 133);
+}
+.protfolio-end p{
+   padding: 15px;
+   text-align: center;
+   font-size: 15px;
+}
+.protfolio-end .btn {
+   padding: 10px 20px;
+   background-color: #ff6f00;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.protfolio-end .btn:hover {
+   background-color: #b38300;
+}
+
+@media screen and (max-width: 768px) {
+   .protfolio-end .btn {
+       font-size: 14px;
+   }
+}
+
+
+/* protfolio ends here */
+
+/* achievement-contact starts form here  */
+
+.achievement {
+   display: flex;
+   flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+ }
+
+ .place,
+ .phone,
+ .email {
+   display: flex;
+   align-items: center;
+   margin-right: 20px; /* Adjust spacing between items */
+   margin-bottom: 30px;
+ }
+ 
+ .place .fa-solid,
+ .phone .fa-solid,
+ .email .fa-solid {
+   margin-right: 10px; /* Adjust spacing between icon and text */
+ }
+ 
+ .text {
+   font-size: 16px;
+  
+ }
+ 
+ /* Media query for smaller screens */
+ @media only screen and (max-width: 992px) {
+   .place,
+   .phone,
+   .email {
+     margin-bottom: 10px; /* Adjust spacing between items on smaller screens */
+   }
+ }
+ 
+.achievement-contact{
+  padding: 1% 7%;
+  background-color:rgb(65, 132, 132) ;
+  color: azure;
+}
+.achievement-contact p {
+   font-size: 15px;
+   text-align: justify;
+}
+
+.contact{
+  text-align: center;
+}
+
+.contact, input,textarea{
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+text-align: center;
+border: none;
+border-radius: 5px;
+resize: none;
+}
+.contact,button{
+   border: none;
+   border-radius: 12px;
+   background-color: rgb(18, 23, 23);
+   color: aliceblue;
+   cursor: pointer;
+   padding: 15px;
+   margin: 10px;
+
+}
+.contact-links{
+   text-align: center;
+
+}
+.media-button .btn{
+   border: none;
+   cursor: pointer;
+   font-size: 35px;
+   padding: 5px;
+   margin: 10px;
+   width: 50px;  
+   background-color: white;
+}
+.btn:hover{
+  background-color: dimgrey; 
+}
+.achievement-contact::after{
+   clear: both;
+   display: table;
+   content: '';
+ }
+
+/* achievement-contact ends here  */
+
+/* footer starts from here */
+.footer{
+   background-color: black;
+   color: rgb(56, 245, 151);
+   padding: 20px;
+   text-align: center;
+   font-size: 0.8rem;
+}
+.footer-menu a {
+   color: rgb(56, 245, 151);
+
+   display: block;
+   margin: 15px;
+   font-size: 1 rem;
+}
+.footer-menu a:hover{
+   color: gray;
+}
+
+.footer::after{
+   clear: both;
+   display: table;
+   content: '';
+}
+
+/* footer end here */

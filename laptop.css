@@ -1,0 +1,150 @@
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.navber{
+background-color: white(243, 243, 243);
+margin-bottom: -30px;
+text-align: center;
+height: 110px;
+top: 0;
+
+  
+}
+.navber-logo img{
+text-align: left;
+height: 60px;
+width:80%;
+margin-top: 5px;
+margin-left: -20px;
+    
+}
+.navber  ul {
+   list-style: none;
+   display: flex;
+ }
+ 
+ .navber  ul li {
+   /* width: 120px; */
+   padding: 10px 30px;
+   /* text-align: center; */
+ 
+   position: relative;
+ }
+ 
+ .navber ul li a {
+   font-size: 20px;
+   color:black;
+   text-decoration: none;
+   transition: all 0.3s;
+   border-radius: 10px;
+   padding: 5px;
+ }
+ 
+ .navber ul li a:hover {
+   background-color:rgb(28, 146, 28) ;
+   color: white;
+ }
+ 
+ .fas {
+   float: right;
+   margin-left: 5px;
+   padding-top: 3px;
+ }
+ 
+ /* dropdown menu style */
+ .dropdown-menu {
+   display: none;
+   position: absolute;
+   z-index: 999;
+ }
+ 
+ .navber ul li:hover .dropdown-menu {
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 100%;
+   background-color: white;
+ }
+ 
+ .navber ul li:hover .dropdown-menu ul {
+   display: block;
+   margin: 10px;
+ }
+ 
+ .navber  ul li:hover .dropdown-menu ul li {
+   width: 150px;
+   padding: 10px;
+   margin-left: -50px;
+ }
+
+ 
+
+.navber::after{
+   content: '';
+   display: table;
+   clear: both;
+}
+/* aboutme start */
+.aboutme-desc p{
+    font-size: 15px;
+    text-align: justify;
+   
+ }
+ .aboutme-image img{
+    border: 5px solid white;
+    border-radius: 50%; 
+    height:250px ;
+    width: 200px;
+    margin-top: 60px;
+ }
+.aboutme-more2 p{
+   text-align: right;
+   font-size: 15px;
+   padding: 15px;
+   margin: 10px;
+}
+
+
+/* about me ends */
+
+/* achievement-contact stat from here  */
+.achievement{
+   padding-right:50px ;
+}
+
+.contact-links{
+   position: relative;
+}
+.media-button{
+   position:absolute;
+   margin-top: 200px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+}
+/* achievement-contact end here  */
+
+
+
+/* footer starts from here */
+.footer-menu{
+   margin-top: 12px;
+
+}
+
+.footer-menu a {
+   display: inline;
+   margin: 10px;
+}
+/* footer end here */
